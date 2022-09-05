@@ -1,12 +1,12 @@
 
 import './App.css';
-import { Button, Checkbox, Form } from 'semantic-ui-react';
+import { Button, Form } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 // Basic Initialization of Sweet Alert 2.
-const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal);
 
 function App() {
   const [output, setOutput] = useState('');
@@ -14,7 +14,7 @@ function App() {
   const [letters, setLetters ] = useState('');
   
   const handleMarco = () => {
-    console.log('marco Online');
+    
     function createGrid(size) {
       var grid = [],
         row = [],
@@ -52,8 +52,7 @@ function App() {
       move.pop();
       compass = compass[Math.floor(Math.random() * compass.length)];
       compass = compass.slice(0,1);
-      console.log(compass);
-      console.log(move);
+
       let moving = [move, compass];
       moving.flat();
       setMarco(moving);
@@ -87,7 +86,6 @@ function App() {
 
   const onKeyPress = (keyName) => {
     setOutput(keyName.key);
-    console.log('The Key up is -> ', keyName.key);
   };
 
   const LeForm = () => (
